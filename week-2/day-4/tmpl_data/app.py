@@ -43,3 +43,7 @@ def show_sq():
     names = ['abc', 'pqr', 'lmn', 'zyt']
 
     return render_template('names.html', nms=names)
+
+@app.errorhandler(404)
+def error_handler(): 
+    return 'This is custom handler'
